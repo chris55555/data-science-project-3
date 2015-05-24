@@ -1,7 +1,7 @@
 ## the raw data is downloaded directly and unzipped to "./UCI HAR Dataset" directory
 ## If you ant to test this code, please change to directory path your data is storred
 ## Here is the R script for this course project as required:
-
+library(dplyr)
 # 1.Merges the training and the test sets to create one data set.
    # first read three training data x, y, subject_train.text
     x_train<-read.table("./UCI HAR Dataset/train/X_train.txt", header=FALSE) 
