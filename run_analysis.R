@@ -3,12 +3,12 @@
 ## Here is the R script for this course project as required:
 
 # 1.Merges the training and the test sets to create one data set.
-   # first read three training data x, y, s_train.text
+   # first read three training data x, y, subject_train.text
     x_train<-read.table("./UCI HAR Dataset/train/X_train.txt", header=FALSE) 
     y_train<-read.table("./UCI HAR Dataset/train/y_train.txt", header=FALSE)
     s_train<-read.table("./UCI HAR dataset/train/subject_train.txt", header=FALSE)
 
-   # then Read three test data x, y, s_test.text
+   # then Read three test data x, y, subject_test.text
     x_test<-read.table("./UCI HAR Dataset/test/X_test.txt", header=FALSE) 
     y_test<-read.table("./UCI HAR Dataset/test/y_test.txt", header=FALSE)
     s_test<-read.table("./UCI HAR Dataset/test/subject_test.txt", header=FALSE)
