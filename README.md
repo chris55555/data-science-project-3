@@ -1,9 +1,8 @@
-# data-science-project-3
-#  This is project work for collect and clean data course on coursera
-# this s how the R code works:
-   #  the raw data was directly dowloaded its web source and unzipped to "./UCI HAR Dataset" directory
-  the correspondin R code did the following work:
-  
+## data-science-project-3
+
+## This repo is for my project work for online collecting and cleaning data from coursera; It comes with the R code doc run_analyis.R and descriptive codebook.text. 
+## the raw data was directly dowloaded its web source and unzipped to "./UCI HAR Dataset" directory. In summary, this is how the R code works:  the corresponding R code did the following work:
+
 ## 1.using read.table() to read three train files x_, y_ and s_train.txt into Rand  combined to one complete train dataset traindata
   # Readed three test files x_, y_, s_test.txt and combined to one complete test dataset testdata;
   # read column names into R from file " "./UCI HAR Dataset/features.txt" for data from x_train or x_test
