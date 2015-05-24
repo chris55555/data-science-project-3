@@ -14,11 +14,10 @@
  # subset combinedata by only choosing those columns with name contains "mean" and "std" and columns "subject" and "label" and put in new dataset meanandsd 
  
 ## 3.Uses descriptive activity names to name the activities in the data set
- # read activity_labels.txt and replace "label" column values in meanandsd dataset to corresponding  
- # activity names (such as WALKING, LAYING etc.) according to this file.  
+ # read activity_labels.txt and replace "label" column values in meanandsd dataset to corresponding activity names (such as WALKING, LAYING etc.) according to this file.  
  
 ## 4.Appropriately labels the data set with descriptive variable names.
- # replacing some short version column names of meanandsd dataset to more descriptive or longer version names, for example: Gyro	to Gyroscope; label  to activity etc.  
+ # replacing some column names of meanandsd dataset to more descriptive or longer version names, for example: Gyro	to Gyroscope; label  to activity etc.  
 
 ## 5.From the data set in step 4, creates a second, independent tidy data  set with the average of each variable for each activity and each subject.
   # calculate average value of each variables for meanandsd and grouped by activity and subject and put result in subdata  
