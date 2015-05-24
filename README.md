@@ -1,6 +1,6 @@
 ## data-science-project-3
 
-## This repo is for my project work for online collecting and cleaning data from coursera; It comes with the R code doc run_analysis.R and descriptive codebook.text. The raw data was directly downloaded from its web source and unzipped to "./UCI HAR Dataset" directory. In summary, this is how the run_analysis.R code works:  
+## This repo is for my project work for online collecting and cleaning data from coursera; It comes with the R code doc run_analysis.R and descriptive codebook.txt. The raw data was directly downloaded from its web source and unzipped to "./UCI HAR Dataset" directory. In summary, this is how the run_analysis.R code works:  
 
 ## 1.Merges the training and the test sets to create one data set.
   # Using read.table() to read three train files x_, y_ and subject_train.txt into R and combined to one complete dataset traindata
