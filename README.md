@@ -1,13 +1,12 @@
 ## data-science-project-3
 
-## This repo is for my project work for online collecting and cleaning data from coursera; It comes with the R code doc run_analyis.R and descriptive codebook.text. 
-## the raw data was directly dowloaded its web source and unzipped to "./UCI HAR Dataset" directory. In summary, this is how the R code works:  the corresponding R code did the following work:
+## This repo is for my project work for online collecting and cleaning data from coursera; It comes with the R code doc run_analyis.R and descriptive codebook.text. the raw data was directly dowloaded its web source and unzipped to "./UCI HAR Dataset" directory. In summary, this is how the R code works:  
 
 ## 1.Merges the training and the test sets to create one data set.
 # using read.table() to read three train files x_, y_ and s_train.txt into Rand  combined to one complete train dataset
 # traindata
-  ## Readed three test files x_, y_, s_test.txt and combined to one complete test dataset testdata;
-  # read column names into R from file " "./UCI HAR Dataset/features.txt" for data from x_train or x_test
+  # Readed three test files x_, y_, s_test.txt and combined to one complete test dataset testdata;
+  # read column names into R from file "./UCI HAR Dataset/features.txt" for data x_train and x_test
   # Assign column names to combined traindata and testdata based on features.text and two extra column names "sunject" and  # #"label"
   # cleanup traindata and testdata by removing duplicated columns
   # combine traindata and testdata as combinedata
