@@ -38,6 +38,8 @@
     # and "label" from combinedata and put in new dataset meanandsd
     meanandsd<-select(combinedata, subject, label, contains("mean"), contains("std"))
 
+
+
 ## 3.Uses descriptive activity names to name the activities in the data set
     # read activity_labels.txt and replace "label" column values in meanandsd dataset to corresponding 
     # activity names (such as WALKING, LAYING etc.) according to this file.
@@ -45,6 +47,8 @@
    labels<-read.table("./UCI HAR Dataset/activity_labels.txt", header=FALSE) 
    meanandsd$label<-factor(meanandsd$label, levels=c(1, 2, 3, 4, 5, 6), labels=c("WALKING",
    "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING","LAYING"))
+
+
 
 ## 4.Appropriately labels the data set with descriptive variable names.
      # replacing some short version column names of meanandsd dataset to more descriptive 
@@ -68,6 +72,8 @@
    
     # Reassign the new column names back to dataset meanandsd
      colnames(meanandsd)<-colname
+
+
 
 ## 5.From the data set in step 4, creates a second, independent tidy data 
 ## set with the average of each variable for each activity and each subject.
