@@ -22,4 +22,110 @@
 ## 5.From the data set in step 4, creates a second, independent tidy data  set with the average of each variable for each activity and each subject.
   # calculate average value of each variables for meanandsd and grouped by activity and subject and put result in subdata  
   # Write the data as subtidydata.txt under current working directory
- 
+  
+In detail, here is the list of variables for this run_analysis.R code (description in bracket)
+x_train  (readed from readings of traing data)
+y_train (readed from activity of training data)
+s_train (readed from subjects of training data)
+x_test  (readed from readings of tes data)
+y_test  (readed from activity of training data)
+s_test  (readed from subjects of training data)
+virables (column names for x_train and x_test)
+traindata (combined training data combined from three datasets x_, y_ and s_train)
+testdata (combined training data combined from three datasets x_, y_ and s_test)
+combinedata (combined data.frame from traindata and testdata)
+meanandsd (subset data.frame from combinedat which conatins only the measurements on the mean and standard deviation for each measurement)
+labels (data.frame readed from activity_labels.text as reference for converting "label" column value to descriptive activity names)
+colnames (column names lists for data.frame meanandsd
+subdata (resulted dataset from meanandsd calculated by with the average of each variable for each activity and each subject.)
+
+    So the variables for final subtidydat.txt ia listed as beleow:
+  
+1	subject
+2	activity
+3	time-BodyAccelerometer-mean()-X
+4	time-BodyAccelerometer-mean()-Y
+5	time-BodyAccelerometer-mean()-Z
+6	time-GravityAccelerometer-mean()-X
+7	time-GravityAccelerometer-mean()-Y
+8	time-GravityAccelerometer-mean()-Z
+9	time-BodyAccelerometerJerk-mean()-X
+10	time-BodyAccelerometerJerk-mean()-Y
+11	time-BodyAccelerometerJerk-mean()-Z
+12	time-BodyGyroscope-mean()-X
+13	time-BodyGyroscope-mean()-Y
+14	time-BodyGyroscope-mean()-Z
+15	time-BodyGyroscopeJerk-mean()-X
+16	time-BodyGyroscopeJerk-mean()-Y
+17	time-BodyGyroscopeJerk-mean()-Z
+18	time-BodyAccelerometerMagnitude-mean()
+19	time-GravityAccelerometerMagnitude-mean()
+20	time-BodyAccelerometerJerkMagnitude-mean()
+21	time-BodyGyroscopeMagnitude-mean()
+22	time-BodyGyroscopeJerkMagnitude-mean()
+23	fBodyAccelerometer-mean()-X
+24	fBodyAccelerometer-mean()-Y
+25	fBodyAccelerometer-mean()-Z
+26	fBodyAccelerometer-meanFrequency()-X
+27	fBodyAccelerometer-meanFrequency()-Y
+28	fBodyAccelerometer-meanFrequency()-Z
+29	fBodyAccelerometerJerk-mean()-X
+30	fBodyAccelerometerJerk-mean()-Y
+31	fBodyAccelerometerJerk-mean()-Z
+32	fBodyAccelerometerJerk-meanFrequency()-X
+33	fBodyAccelerometerJerk-meanFrequency()-Y
+34	fBodyAccelerometerJerk-meanFrequency()-Z
+35	fBodyGyroscope-mean()-X
+36	fBodyGyroscope-mean()-Y
+37	fBodyGyroscope-mean()-Z
+38	fBodyGyroscope-meanFrequency()-X
+39	fBodyGyroscope-meanFrequency()-Y
+40	fBodyGyroscope-meanFrequency()-Z
+41	fBodyAccelerometerMagnitude-mean()
+42	fBodyAccelerometerMagnitude-meanFrequency()
+43	fBodyAccelerometerJerkMagnitude-mean()
+44	fBodyAccelerometerJerkMagnitude-meanFrequency()
+45	fBodyGyroscopeMagnitude-mean()
+46	fBodyGyroscopeMagnitude-meanFrequency()
+47	fBodyGyroscopeJerkMagnitude-mean()
+48	fBodyGyroscopeJerkMagnitude-meanFrequency()
+49	angle(time-BodyAccelerometerMean,gravity)
+50	angle(time-BodyAccelerometerJerkMean),gravityMean)
+51	angle(time-BodyGyroscopeMean,gravityMean)
+52	angle(time-BodyGyroscopeJerkMean,gravityMean)
+53	angle(X,gravityMean)
+54	angle(Y,gravityMean)
+55	angle(Z,gravityMean)
+56	time-BodyAccelerometer-std()-X
+57	time-BodyAccelerometer-std()-Y
+58	time-BodyAccelerometer-std()-Z
+59	time-GravityAccelerometer-std()-X
+60	time-GravityAccelerometer-std()-Y
+61	time-GravityAccelerometer-std()-Z
+62	time-BodyAccelerometerJerk-std()-X
+63	time-BodyAccelerometerJerk-std()-Y
+64	time-BodyAccelerometerJerk-std()-Z
+65	time-BodyGyroscope-std()-X
+66	time-BodyGyroscope-std()-Y
+67	time-BodyGyroscope-std()-Z
+68	time-BodyGyroscopeJerk-std()-X
+69	time-BodyGyroscopeJerk-std()-Y
+70	time-BodyGyroscopeJerk-std()-Z
+71	time-BodyAccelerometerMagnitude-std()
+72	time-GravityAccelerometerMagnitude-std()
+73	time-BodyAccelerometerJerkMagnitude-std()
+74	time-BodyGyroscopeMagnitude-std()
+75	time-BodyGyroscopeJerkMagnitude-std()
+76	fBodyAccelerometer-std()-X
+77	fBodyAccelerometer-std()-Y
+78	fBodyAccelerometer-std()-Z
+79	fBodyAccelerometerJerk-std()-X
+80	fBodyAccelerometerJerk-std()-Y
+81	fBodyAccelerometerJerk-std()-Z
+82	fBodyGyroscope-std()-X
+83	fBodyGyroscope-std()-Y
+84	fBodyGyroscope-std()-Z
+85	fBodyAccelerometerMagnitude-std()
+86	fBodyAccelerometerJerkMagnitude-std()
+87	fBodyGyroscopeMagnitude-std()
+88	fBodyGyroscopeJerkMagnitude-std()
